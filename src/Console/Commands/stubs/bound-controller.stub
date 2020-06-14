@@ -1,0 +1,50 @@
+<?php
+
+namespace DummyNamespace;
+
+use DummyRootNamespaceHttp\Requests\DummyModel\DestroyRequest;
+use DummyRootNamespaceHttp\Requests\DummyModel\IndexRequest;
+use DummyRootNamespaceHttp\Requests\DummyModel\PaginateRequest;
+use DummyRootNamespaceHttp\Requests\DummyModel\RestoreRequest;
+use DummyRootNamespaceHttp\Requests\DummyModel\ShowRequest;
+use DummyRootNamespaceHttp\Requests\DummyModel\StoreRequest;
+use DummyRootNamespaceHttp\Requests\DummyModel\UpdateRequest;
+use Thtg88\MmCms\Http\Requests\Contracts\DestroyRequestInterface;
+use Thtg88\MmCms\Http\Requests\Contracts\IndexRequestInterface;
+use Thtg88\MmCms\Http\Requests\Contracts\PaginateRequestInterface;
+use Thtg88\MmCms\Http\Requests\Contracts\RestoreRequestInterface;
+use Thtg88\MmCms\Http\Requests\Contracts\ShowRequestInterface;
+use Thtg88\MmCms\Http\Requests\Contracts\StoreRequestInterface;
+use Thtg88\MmCms\Http\Requests\Contracts\UpdateRequestInterface;
+use Thtg88\MmCms\Http\Controllers\Controller;
+
+class DummyClass extends Controller
+{
+    /**
+     * The controller-specific bindings.
+     *
+     * @var string[]|callable[]
+     */
+    protected $bindings = [
+        DestroyRequestInterface::class => DestroyRequest::class,
+        IndexRequestInterface::class => IndexRequest::class,
+        PaginateRequestInterface::class => PaginateRequest::class,
+        RestoreRequestInterface::class => RestoreRequest::class,
+        ShowRequestInterface::class => ShowRequest::class,
+        StoreRequestInterface::class => StoreRequest::class,
+        UpdateRequestInterface::class => UpdateRequest::class,
+    ];
+
+    /**
+     * Create a new controller instance.
+     *
+     * @param \DummyRootNamespaceServices\DummyService $service
+     * @return void
+     */
+    public function __construct(DummyService $service)
+    {
+        $this->service = $service;
+
+        parent::__construct();
+    }
+}

@@ -42,9 +42,8 @@ class HttpBundleCommand extends Command
 
         $this->call('scaffold:service', ['name' => $model_name.'Service']);
         $this->call('scaffold:http-requests', ['model_name' => $model_name]);
-        $this->call('make:controller', [
+        $this->call('scaffold:bound-controller', [
             'name' => $model_name.'Controller',
-            '--resource' => true,
         ]);
     }
 }
