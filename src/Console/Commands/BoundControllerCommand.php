@@ -90,7 +90,7 @@ class BoundControllerCommand extends GeneratorCommand
      * @param string  $name
      * @return string
      */
-    protected function replaceModel(&$stub, $name)
+    protected function replaceService(&$stub, $name)
     {
         $class = str_replace($this->getNamespace($name).'\\', '', $name);
 
