@@ -5,6 +5,7 @@ namespace Thtg88\LaravelScaffoldCommands;
 use Illuminate\Container\Container;
 use Illuminate\Support\ServiceProvider;
 use Thtg88\LaravelScaffoldCommands\Console\Commands\AllCommand;
+use Thtg88\LaravelScaffoldCommands\Console\Commands\BoundControllerCommand;
 use Thtg88\LaravelScaffoldCommands\Console\Commands\HttpBundleCommand;
 use Thtg88\LaravelScaffoldCommands\Console\Commands\HttpRequestsCommand;
 use Thtg88\LaravelScaffoldCommands\Console\Commands\RepositoryCommand;
@@ -30,6 +31,7 @@ class LaravelScaffoldCommandsServiceProvider extends ServiceProvider
         // Commands
         $this->commands([
             AllCommand::class,
+            BoundControllerCommand::class,
             HttpBundleCommand::class,
             HttpRequestsCommand::class,
             RepositoryCommand::class,
