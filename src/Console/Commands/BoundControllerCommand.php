@@ -60,7 +60,7 @@ class BoundControllerCommand extends GeneratorCommand
         $stub = $this->files->get($this->getStub());
 
         return $this->replaceNamespace($stub, $name)
-            // ->replaceRepository($stub, $name)
+            ->replaceModel($stub, $name)
             ->replaceClass($stub, $name);
     }
 
@@ -71,14 +71,14 @@ class BoundControllerCommand extends GeneratorCommand
      * @param string  $name
      * @return string
      */
-    // protected function replaceRepository(&$stub, $name)
-    // {
-    //     $class = str_replace($this->getNamespace($name).'\\', '', $name);
-    //
-    //     $class = str_replace('Service', 'Repository', $class);
-    //
-    //     $stub = str_replace('DummyRepository', $class, $stub);
-    //
-    //     return $this;
-    // }
+    protected function replaceModel(&$stub, $name)
+    {
+        $class = str_replace($this->getNamespace($name).'\\', '', $name);
+
+        $class = str_replace('Controller', '', $class);
+
+        $stub = str_replace('DummyModel', $class, $stub);
+
+        return $this;
+    }
 }
