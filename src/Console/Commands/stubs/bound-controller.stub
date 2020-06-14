@@ -2,13 +2,13 @@
 
 namespace DummyNamespace;
 
-use DummySuperNamespace\Requests\DestroyRequest;
-use DummySuperNamespace\Requests\IndexRequest;
-use DummySuperNamespace\Requests\PaginateRequest;
-use DummySuperNamespace\Requests\RestoreRequest;
-use DummySuperNamespace\Requests\ShowRequest;
-use DummySuperNamespace\Requests\StoreRequest;
-use DummySuperNamespace\Requests\UpdateRequest;
+use DummyRootNamespaceHttp\Requests\DestroyRequest;
+use DummyRootNamespaceHttp\Requests\IndexRequest;
+use DummyRootNamespaceHttp\Requests\PaginateRequest;
+use DummyRootNamespaceHttp\Requests\RestoreRequest;
+use DummyRootNamespaceHttp\Requests\ShowRequest;
+use DummyRootNamespaceHttp\Requests\StoreRequest;
+use DummyRootNamespaceHttp\Requests\UpdateRequest;
 use Thtg88\MmCms\Http\Requests\Contracts\DestroyRequestInterface;
 use Thtg88\MmCms\Http\Requests\Contracts\IndexRequestInterface;
 use Thtg88\MmCms\Http\Requests\Contracts\PaginateRequestInterface;
@@ -38,7 +38,7 @@ class DummyClass extends Controller
     /**
      * Create a new controller instance.
      *
-     * @param \DummyRootNamespace\Services\DummyService $service
+     * @param \DummyRootNamespaceServices\DummyService $service
      * @return void
      */
     public function __construct(DummyService $service)
