@@ -2,13 +2,13 @@
 
 namespace DummyNamespace;
 
-use DummyRootNamespaceHttp\Requests\DestroyRequest;
-use DummyRootNamespaceHttp\Requests\IndexRequest;
-use DummyRootNamespaceHttp\Requests\PaginateRequest;
-use DummyRootNamespaceHttp\Requests\RestoreRequest;
-use DummyRootNamespaceHttp\Requests\ShowRequest;
-use DummyRootNamespaceHttp\Requests\StoreRequest;
-use DummyRootNamespaceHttp\Requests\UpdateRequest;
+use DummyRootNamespaceHttp\Requests\DummyModel\DestroyRequest;
+use DummyRootNamespaceHttp\Requests\DummyModel\IndexRequest;
+use DummyRootNamespaceHttp\Requests\DummyModel\PaginateRequest;
+use DummyRootNamespaceHttp\Requests\DummyModel\RestoreRequest;
+use DummyRootNamespaceHttp\Requests\DummyModel\ShowRequest;
+use DummyRootNamespaceHttp\Requests\DummyModel\StoreRequest;
+use DummyRootNamespaceHttp\Requests\DummyModel\UpdateRequest;
 use Thtg88\MmCms\Http\Requests\Contracts\DestroyRequestInterface;
 use Thtg88\MmCms\Http\Requests\Contracts\IndexRequestInterface;
 use Thtg88\MmCms\Http\Requests\Contracts\PaginateRequestInterface;
