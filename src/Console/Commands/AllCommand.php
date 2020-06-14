@@ -5,14 +5,14 @@ namespace Thtg88\LaravelScaffoldCommands\Console\Commands;
 use Illuminate\Console\Command;
 use Illuminate\Support\Str;
 
-class ScaffoldMakeCommand extends Command
+class AllCommand extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'scaffold:make:scaffold {model_name}';
+    protected $signature = 'scaffold:all {model_name}';
 
     /**
      * The console command description.
@@ -48,10 +48,10 @@ class ScaffoldMakeCommand extends Command
         $this->call('make:seeder', [
             'name' => Str::plural($model_name).'TableSeeder',
         ]);
-        $this->call('scaffold:make:repository', [
+        $this->call('scaffold:repository', [
             'name' => $model_name.'Repository',
         ]);
-        $this->call('scaffold:make:http-bundle', ['model_name' => $model_name]);
+        $this->call('scaffold:http-bundle', ['model_name' => $model_name]);
         $this->call('make:factory', ['name' => $model_name.'Factory']);
 
         $test_methods = [

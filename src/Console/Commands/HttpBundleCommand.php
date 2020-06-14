@@ -4,21 +4,21 @@ namespace Thtg88\LaravelScaffoldCommands\Console\Commands;
 
 use Illuminate\Console\Command;
 
-class HttpRequestsMakeCommand extends Command
+class HttpBundleCommand extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'scaffold:make:http-requests {model_name}';
+    protected $signature = 'scaffold:http-bundle {model_name}';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Create the HTTP Requests classes.';
+    protected $description = 'Create the HTTP bundle classes (HTTP Requests, Controller, and Service).';
 
     /**
      * Create a new command instance.
@@ -40,20 +40,11 @@ class HttpRequestsMakeCommand extends Command
         // Get model name from arguments
         $model_name = $this->argument('model_name');
 
-        $methods = [
-            'create',
-            'destroy',
-            'edit',
-            'index',
-            'store',
-            'update',
-        ];
-
-        foreach ($methods as $method) {
-            $this->call('scaffold:make:request', [
-                'name' => $model_name,
-                '--method' => $method,
-            ]);
-        }
+        $this->call('scaffold:service', ['name' => $model_name.'Service']);
+        $this->call('scaffold:http-requests', ['model_name' => $model_name]);
+        $this->call('make:controller', [
+            'name' => $model_name.'Controller',
+            '--resource' => true,
+        ]);
     }
 }

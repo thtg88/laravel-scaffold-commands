@@ -4,8 +4,13 @@ namespace Thtg88\LaravelScaffoldCommands;
 
 use Illuminate\Container\Container;
 use Illuminate\Support\ServiceProvider;
-use Thtg88\LaravelScaffoldCommands\Console\Commands\RepositoryMakeCommand;
-use Thtg88\LaravelScaffoldCommands\Console\Commands\ResourceRequestMakeCommand;
+use Thtg88\LaravelScaffoldCommands\Console\Commands\AllCommand;
+use Thtg88\LaravelScaffoldCommands\Console\Commands\HttpBundleCommand;
+use Thtg88\LaravelScaffoldCommands\Console\Commands\HttpRequestsCommand;
+use Thtg88\LaravelScaffoldCommands\Console\Commands\RepositoryCommand;
+use Thtg88\LaravelScaffoldCommands\Console\Commands\ResourceBundleCommand;
+use Thtg88\LaravelScaffoldCommands\Console\Commands\ResourceRequestCommand;
+use Thtg88\LaravelScaffoldCommands\Console\Commands\ServiceCommand;
 
 class LaravelScaffoldCommandsServiceProvider extends ServiceProvider
 {
@@ -24,8 +29,13 @@ class LaravelScaffoldCommandsServiceProvider extends ServiceProvider
 
         // Commands
         $this->commands([
-            RepositoryMakeCommand::class,
-            ResourceRequestMakeCommand::class,
+            AllCommand::class,
+            HttpBundleCommand::class,
+            HttpRequestsCommand::class,
+            RepositoryCommand::class,
+            ResourceBundleCommand::class,
+            ResourceRequestCommand::class,
+            ServiceCommand::class,
         ]);
     }
 

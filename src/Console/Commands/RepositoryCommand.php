@@ -5,28 +5,28 @@ namespace Thtg88\LaravelScaffoldCommands\Console\Commands;
 use Illuminate\Console\GeneratorCommand;
 use Symfony\Component\Console\Input\InputArgument;
 
-class ServiceMakeCommand extends GeneratorCommand
+class RepositoryCommand extends GeneratorCommand
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'scaffold:make:service {name : The name of the class}';
+    protected $signature = 'scaffold:repository {name : The name of the class}';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Create a new service class';
+    protected $description = 'Create a new repository class';
 
     /**
      * The type of class being generated.
      *
      * @var string
      */
-    protected $type = 'Service';
+    protected $type = 'Repository';
 
     /**
      * Get the stub file for the generator.
@@ -35,7 +35,7 @@ class ServiceMakeCommand extends GeneratorCommand
      */
     protected function getStub()
     {
-        return __DIR__.'/stubs/service.stub';
+        return __DIR__.'/stubs/repository.stub';
     }
 
     /**
@@ -46,7 +46,7 @@ class ServiceMakeCommand extends GeneratorCommand
      */
     protected function getDefaultNamespace($rootNamespace)
     {
-        return $rootNamespace.'\Services';
+        return $rootNamespace.'\Repositories';
     }
 
     /**
@@ -60,7 +60,7 @@ class ServiceMakeCommand extends GeneratorCommand
         $stub = $this->files->get($this->getStub());
 
         return $this->replaceNamespace($stub, $name)
-            ->replaceRepository($stub, $name)
+            ->replaceModel($stub, $name)
             ->replaceClass($stub, $name);
     }
 
@@ -71,13 +71,13 @@ class ServiceMakeCommand extends GeneratorCommand
      * @param string  $name
      * @return string
      */
-    protected function replaceRepository(&$stub, $name)
+    protected function replaceModel(&$stub, $name)
     {
         $class = str_replace($this->getNamespace($name).'\\', '', $name);
 
-        $class = str_replace('Service', 'Repository', $class);
+        $class = str_replace('Repository', '', $class);
 
-        $stub = str_replace('DummyRepository', $class, $stub);
+        $stub = str_replace('DummyModel', $class, $stub);
 
         return $this;
     }

@@ -6,14 +6,14 @@ use Illuminate\Console\GeneratorCommand;
 use Illuminate\Support\Str;
 use Symfony\Component\Console\Input\InputOption;
 
-class ResourceRequestMakeCommand extends GeneratorCommand
+class ResourceRequestCommand extends GeneratorCommand
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'scaffold:make:request
+    protected $signature = 'scaffold:request
                             {name : The model name the class is targeting}
                             {--method= : The method name (e.g. store, update, destroy, etc.)}';
 
