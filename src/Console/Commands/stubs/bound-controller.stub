@@ -9,14 +9,14 @@ use DummyRootNamespaceHttp\Requests\DummyModel\RestoreRequest;
 use DummyRootNamespaceHttp\Requests\DummyModel\ShowRequest;
 use DummyRootNamespaceHttp\Requests\DummyModel\StoreRequest;
 use DummyRootNamespaceHttp\Requests\DummyModel\UpdateRequest;
-use Thtg88\MmCms\Http\Requests\Contracts\DestroyRequestInterface;
-use Thtg88\MmCms\Http\Requests\Contracts\IndexRequestInterface;
-use Thtg88\MmCms\Http\Requests\Contracts\PaginateRequestInterface;
-use Thtg88\MmCms\Http\Requests\Contracts\RestoreRequestInterface;
-use Thtg88\MmCms\Http\Requests\Contracts\ShowRequestInterface;
-use Thtg88\MmCms\Http\Requests\Contracts\StoreRequestInterface;
-use Thtg88\MmCms\Http\Requests\Contracts\UpdateRequestInterface;
 use Thtg88\MmCms\Http\Controllers\Controller;
+use DummyRootNamespaceHttp\Requests\Contracts\DestroyRequestInterface;
+use DummyRootNamespaceHttp\Requests\Contracts\IndexRequestInterface;
+use DummyRootNamespaceHttp\Requests\Contracts\PaginateRequestInterface;
+use DummyRootNamespaceHttp\Requests\Contracts\RestoreRequestInterface;
+use DummyRootNamespaceHttp\Requests\Contracts\ShowRequestInterface;
+use DummyRootNamespaceHttp\Requests\Contracts\StoreRequestInterface;
+use DummyRootNamespaceHttp\Requests\Contracts\UpdateRequestInterface;
 
 class DummyClass extends Controller
 {
