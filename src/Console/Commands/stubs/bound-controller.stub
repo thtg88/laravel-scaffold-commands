@@ -17,6 +17,7 @@ use DummyRootNamespaceHttp\Requests\Contracts\RestoreRequestInterface;
 use DummyRootNamespaceHttp\Requests\Contracts\ShowRequestInterface;
 use DummyRootNamespaceHttp\Requests\Contracts\StoreRequestInterface;
 use DummyRootNamespaceHttp\Requests\Contracts\UpdateRequestInterface;
+use DummyRootNamespaceServices\DummyService;
 
 class DummyClass extends Controller
 {
