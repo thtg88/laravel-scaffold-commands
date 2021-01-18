@@ -42,7 +42,7 @@ class AllCommand extends Command
         $model_name = $this->argument('model_name');
 
         $this->call('make:model', [
-            'name' => 'Models\\'.$model_name,
+            'name'        => 'Models\\'.$model_name,
             '--migration' => true,
         ]);
         $this->call('make:seeder', [
