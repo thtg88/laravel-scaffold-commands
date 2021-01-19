@@ -4,7 +4,6 @@ namespace Thtg88\LaravelScaffoldCommands\Tests\Feature;
 
 use Symfony\Component\Console\Exception\RuntimeException;
 use Thtg88\LaravelScaffoldCommands\Tests\Concerns\ExistingFilesAssertion;
-use Thtg88\LaravelScaffoldCommands\Tests\Feature\TestCase;
 
 class RepositoryCommandTest extends TestCase
 {

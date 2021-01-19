@@ -3,7 +3,6 @@
 namespace Thtg88\LaravelScaffoldCommands\Console\Commands;
 
 use Illuminate\Console\GeneratorCommand;
-use Symfony\Component\Console\Input\InputArgument;
 
 class BoundControllerCommand extends GeneratorCommand
 {
@@ -41,7 +40,8 @@ class BoundControllerCommand extends GeneratorCommand
     /**
      * Get the default namespace for the class.
      *
-     * @param string  $rootNamespace
+     * @param string $rootNamespace
+     *
      * @return string
      */
     protected function getDefaultNamespace($rootNamespace)
@@ -52,7 +52,8 @@ class BoundControllerCommand extends GeneratorCommand
     /**
      * Build the class with the given name.
      *
-     * @param string  $name
+     * @param string $name
+     *
      * @return string
      */
     protected function buildClass($name)
@@ -68,8 +69,9 @@ class BoundControllerCommand extends GeneratorCommand
     /**
      * Replace the model class name for the given stub.
      *
-     * @param string  $stub
-     * @param string  $name
+     * @param string $stub
+     * @param string $name
+     *
      * @return string
      */
     protected function replaceModel(&$stub, $name)
@@ -86,8 +88,9 @@ class BoundControllerCommand extends GeneratorCommand
     /**
      * Replace the service class name for the given stub.
      *
-     * @param string  $stub
-     * @param string  $name
+     * @param string $stub
+     * @param string $name
+     *
      * @return string
      */
     protected function replaceService(&$stub, $name)

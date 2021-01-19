@@ -51,7 +51,7 @@ class HttpRequestsCommand extends Command
 
         foreach ($methods as $method) {
             $this->call('scaffold:request', [
-                'name' => $model_name,
+                'name'     => $model_name,
                 '--method' => $method,
             ]);
         }
